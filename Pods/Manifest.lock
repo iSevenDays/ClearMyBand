@@ -1,0 +1,18 @@
+PODS:
+  - MicrosoftBandKit_iOSDevelopment (1.0.0):
+    - MicrosoftBandKit_iOSDevelopment/sources (= 1.0.0)
+  - MicrosoftBandKit_iOSDevelopment/sources (1.0.0)
+
+DEPENDENCIES:
+  - MicrosoftBandKit_iOSDevelopment (from `MicrosoftBandKitDevelopment`)
+
+EXTERNAL SOURCES:
+  MicrosoftBandKit_iOSDevelopment:
+    :path: MicrosoftBandKitDevelopment
+
+SPEC CHECKSUMS:
+  MicrosoftBandKit_iOSDevelopment: 83aa781f81cdaf327abf8ec67bea3aaffaa2d804
+
+PODFILE CHECKSUM: 38b12be5f9087ba4133618e41b54958070eb233d
+
+COCOAPODS: 1.1.1

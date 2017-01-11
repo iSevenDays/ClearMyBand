@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		112B971A149247D569A982900BE663DF /* MSBDeviceNotificationFacility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC889365A8A605FC73460A192AAEA4B /* MSBDeviceNotificationFacility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12CFD778DFB7D053FB884212EA00EBF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		35367202A627A76DF8042B8E5926BB6D /* Pods-ClearMyBand-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1ED42240A8BF4833E5AA03EBFED436 /* Pods-ClearMyBand-dummy.m */; };
+		5D5DFACB7712E868D09350EA617929C6 /* MSBTileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C2CC7F48E67F40B8E7DE80120A57AE43 /* MSBTileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70D42422AB4515172F44397047843BEB /* MSBTileUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = DCE23252C50444C42D7E93D433F91526 /* MSBTileUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8137C307E46D00DACC87C477AEDF83A8 /* MSBStartStrip.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D763E6A22189911223F4D142E4FE18 /* MSBStartStrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E5A921E4F54C96253460032EBB25576 /* MSBTileManagerSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E9A9279793E7CD94C1D0B3EC745265A /* MSBTileManagerSwizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DB0E41184DF25BB9B28E968F82D1AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9DB6BCBE68570413DABDC8FAAF277225 /* MicrosoftBandKit_iOSDevelopment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F5963FB9307B1D83535D6BF276014D /* MicrosoftBandKit_iOSDevelopment-dummy.m */; };
+		A41AC888A2F19DCCE1A18BBC607E3473 /* MSBClient+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 539AB3612AD33A7FE8018955BA562CE3 /* MSBClient+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDE8B5112421C038BA4C8AA49CCB0AE7 /* MSBStrapp.h in Headers */ = {isa = PBXBuildFile; fileRef = E57F6B5CA339E4CDC56B14FEAF5A18B4 /* MSBStrapp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E51249346EB1B007139C83A809B288E3 /* MSBStartStrip_Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA87399779C09210EA4406226DBB6CD /* MSBStartStrip_Private.m */; };
+		F2632C484A9A41F2CEF6EC314F1BC492 /* MSBDeviceStrappDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = DD68444E1BF2A28B9756600AB3CE9BEF /* MSBDeviceStrappDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FED882746B2428B82614CD127A888741 /* MSBTileManagerSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C64D4938550B9BF48D4979ADA5B0D849 /* MSBTileManagerSwizzle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5471CF07D36FCED48B945FAC9A8A13FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DF0222BFC0BADA51A3B260B58106656;
+			remoteInfo = MicrosoftBandKit_iOSDevelopment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F11086705DE51F9A5D861AE400FAAC8 /* Pods-ClearMyBand-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClearMyBand-frameworks.sh"; sourceTree = "<group>"; };
+		1BC889365A8A605FC73460A192AAEA4B /* MSBDeviceNotificationFacility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBDeviceNotificationFacility.h; sourceTree = "<group>"; };
+		1C1ED42240A8BF4833E5AA03EBFED436 /* Pods-ClearMyBand-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClearMyBand-dummy.m"; sourceTree = "<group>"; };
+		388C56432C961F60B71896BC9B433E91 /* MicrosoftBandKit_iOSDevelopment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MicrosoftBandKit_iOSDevelopment-prefix.pch"; sourceTree = "<group>"; };
+		539AB3612AD33A7FE8018955BA562CE3 /* MSBClient+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSBClient+Private.h"; sourceTree = "<group>"; };
+		5E9A9279793E7CD94C1D0B3EC745265A /* MSBTileManagerSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBTileManagerSwizzle.h; sourceTree = "<group>"; };
+		65D3908507ACFA1184023E7722E0B1DD /* MicrosoftBandKit_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftBandKit_iOS.framework; sourceTree = "<group>"; };
+		66525B4DEEFD6EB309E10033D55A4B18 /* Pods-ClearMyBand-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClearMyBand-acknowledgements.plist"; sourceTree = "<group>"; };
+		72C7AFD16DFCF564400EA42F404C61D1 /* MicrosoftBandKit_iOSDevelopment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MicrosoftBandKit_iOSDevelopment.xcconfig; sourceTree = "<group>"; };
+		8DA87399779C09210EA4406226DBB6CD /* MSBStartStrip_Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSBStartStrip_Private.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ADFC1F6EF6C6397C77556B60BD72C183 /* libMicrosoftBandKit_iOSDevelopment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMicrosoftBandKit_iOSDevelopment.a; path = libMicrosoftBandKit_iOSDevelopment.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE1271527B79759E64F1B1831030FEA5 /* Pods-ClearMyBand.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClearMyBand.release.xcconfig"; sourceTree = "<group>"; };
+		B29F35F4A0A6977D866E056EE607CF9C /* Pods-ClearMyBand.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClearMyBand.debug.xcconfig"; sourceTree = "<group>"; };
+		B59B80837EB6484A5EA039E5386330F4 /* Pods-ClearMyBand-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClearMyBand-resources.sh"; sourceTree = "<group>"; };
+		B8F5963FB9307B1D83535D6BF276014D /* MicrosoftBandKit_iOSDevelopment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MicrosoftBandKit_iOSDevelopment-dummy.m"; sourceTree = "<group>"; };
+		C2CC7F48E67F40B8E7DE80120A57AE43 /* MSBTileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBTileManager.h; sourceTree = "<group>"; };
+		C64D4938550B9BF48D4979ADA5B0D849 /* MSBTileManagerSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSBTileManagerSwizzle.m; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD38CCA3EA412E387D8B87A4CEA8ED3E /* Pods-ClearMyBand-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClearMyBand-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DCE23252C50444C42D7E93D433F91526 /* MSBTileUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBTileUtility.h; sourceTree = "<group>"; };
+		DD68444E1BF2A28B9756600AB3CE9BEF /* MSBDeviceStrappDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBDeviceStrappDescriptor.h; sourceTree = "<group>"; };
+		E57F6B5CA339E4CDC56B14FEAF5A18B4 /* MSBStrapp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBStrapp.h; sourceTree = "<group>"; };
+		F5D763E6A22189911223F4D142E4FE18 /* MSBStartStrip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSBStartStrip.h; sourceTree = "<group>"; };
+		FB0F25C1092964032770F834AF5B73A8 /* libPods-ClearMyBand.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ClearMyBand.a"; path = "libPods-ClearMyBand.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28D5AF515B70EE02609480F211CC8310 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12CFD778DFB7D053FB884212EA00EBF0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51789EF58EB54DABBAD51F25C2B5AD62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98DB0E41184DF25BB9B28E968F82D1AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		063A48F11C421713707AB14AF49912C1 /* Pods-ClearMyBand */ = {
+			isa = PBXGroup;
+			children = (
+				CD38CCA3EA412E387D8B87A4CEA8ED3E /* Pods-ClearMyBand-acknowledgements.markdown */,
+				66525B4DEEFD6EB309E10033D55A4B18 /* Pods-ClearMyBand-acknowledgements.plist */,
+				1C1ED42240A8BF4833E5AA03EBFED436 /* Pods-ClearMyBand-dummy.m */,
+				0F11086705DE51F9A5D861AE400FAAC8 /* Pods-ClearMyBand-frameworks.sh */,
+				B59B80837EB6484A5EA039E5386330F4 /* Pods-ClearMyBand-resources.sh */,
+				B29F35F4A0A6977D866E056EE607CF9C /* Pods-ClearMyBand.debug.xcconfig */,
+				AE1271527B79759E64F1B1831030FEA5 /* Pods-ClearMyBand.release.xcconfig */,
+			);
+			name = "Pods-ClearMyBand";
+			path = "Target Support Files/Pods-ClearMyBand";
+			sourceTree = "<group>";
+		};
+		2133DA7FD85EFD2992508BA334AEFE84 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				577612A0C6BFF7B6EEB6C3A79B073E6C /* MicrosoftBandKit_iOSDevelopment */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		577612A0C6BFF7B6EEB6C3A79B073E6C /* MicrosoftBandKit_iOSDevelopment */ = {
+			isa = PBXGroup;
+			children = (
+				57AFE17D619143E3BA52DB796411C629 /* Frameworks */,
+				C78C33DC62FE0F82FFCDFA2D0FC236DC /* sources */,
+				8AED60DA380F2E3E9BB8909279B9C410 /* Support Files */,
+			);
+			name = MicrosoftBandKit_iOSDevelopment;
+			path = ../MicrosoftBandKitDevelopment;
+			sourceTree = "<group>";
+		};
+		57AFE17D619143E3BA52DB796411C629 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65D3908507ACFA1184023E7722E0B1DD /* MicrosoftBandKit_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64F3CE1B41F1110AA0EC6297E3777AA0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				063A48F11C421713707AB14AF49912C1 /* Pods-ClearMyBand */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				2133DA7FD85EFD2992508BA334AEFE84 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				ED00A95DA2B454800035B632A678C87F /* Products */,
+				64F3CE1B41F1110AA0EC6297E3777AA0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8AED60DA380F2E3E9BB8909279B9C410 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72C7AFD16DFCF564400EA42F404C61D1 /* MicrosoftBandKit_iOSDevelopment.xcconfig */,
+				B8F5963FB9307B1D83535D6BF276014D /* MicrosoftBandKit_iOSDevelopment-dummy.m */,
+				388C56432C961F60B71896BC9B433E91 /* MicrosoftBandKit_iOSDevelopment-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Pods/Target Support Files/MicrosoftBandKit_iOSDevelopment";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C78C33DC62FE0F82FFCDFA2D0FC236DC /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				539AB3612AD33A7FE8018955BA562CE3 /* MSBClient+Private.h */,
+				1BC889365A8A605FC73460A192AAEA4B /* MSBDeviceNotificationFacility.h */,
+				DD68444E1BF2A28B9756600AB3CE9BEF /* MSBDeviceStrappDescriptor.h */,
+				F5D763E6A22189911223F4D142E4FE18 /* MSBStartStrip.h */,
+				8DA87399779C09210EA4406226DBB6CD /* MSBStartStrip_Private.m */,
+				E57F6B5CA339E4CDC56B14FEAF5A18B4 /* MSBStrapp.h */,
+				C2CC7F48E67F40B8E7DE80120A57AE43 /* MSBTileManager.h */,
+				5E9A9279793E7CD94C1D0B3EC745265A /* MSBTileManagerSwizzle.h */,
+				C64D4938550B9BF48D4979ADA5B0D849 /* MSBTileManagerSwizzle.m */,
+				DCE23252C50444C42D7E93D433F91526 /* MSBTileUtility.h */,
+			);
+			name = sources;
+			sourceTree = "<group>";
+		};
+		ED00A95DA2B454800035B632A678C87F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADFC1F6EF6C6397C77556B60BD72C183 /* libMicrosoftBandKit_iOSDevelopment.a */,
+				FB0F25C1092964032770F834AF5B73A8 /* libPods-ClearMyBand.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		40D2D5D408DEC3C0820CAB32C191FD42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41AC888A2F19DCCE1A18BBC607E3473 /* MSBClient+Private.h in Headers */,
+				112B971A149247D569A982900BE663DF /* MSBDeviceNotificationFacility.h in Headers */,
+				F2632C484A9A41F2CEF6EC314F1BC492 /* MSBDeviceStrappDescriptor.h in Headers */,
+				8137C307E46D00DACC87C477AEDF83A8 /* MSBStartStrip.h in Headers */,
+				BDE8B5112421C038BA4C8AA49CCB0AE7 /* MSBStrapp.h in Headers */,
+				5D5DFACB7712E868D09350EA617929C6 /* MSBTileManager.h in Headers */,
+				8E5A921E4F54C96253460032EBB25576 /* MSBTileManagerSwizzle.h in Headers */,
+				70D42422AB4515172F44397047843BEB /* MSBTileUtility.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9DF0222BFC0BADA51A3B260B58106656 /* MicrosoftBandKit_iOSDevelopment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267C7D3CE62ED6134B0C2D470873CD84 /* Build configuration list for PBXNativeTarget "MicrosoftBandKit_iOSDevelopment" */;
+			buildPhases = (
+				0FC20C64E3422413453EB4E6A9639696 /* Sources */,
+				28D5AF515B70EE02609480F211CC8310 /* Frameworks */,
+				40D2D5D408DEC3C0820CAB32C191FD42 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MicrosoftBandKit_iOSDevelopment;
+			productName = MicrosoftBandKit_iOSDevelopment;
+			productReference = ADFC1F6EF6C6397C77556B60BD72C183 /* libMicrosoftBandKit_iOSDevelopment.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F8B8CC8CE71E459F7A170C65C0D2B9DF /* Pods-ClearMyBand */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB8B68716A73132217A2C37EFFB06B8 /* Build configuration list for PBXNativeTarget "Pods-ClearMyBand" */;
+			buildPhases = (
+				8BFCF5327B71B39905518DC09AD96716 /* Sources */,
+				51789EF58EB54DABBAD51F25C2B5AD62 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E44F0DA8A2A8DD7BCC6E8168B1DB544 /* PBXTargetDependency */,
+			);
+			name = "Pods-ClearMyBand";
+			productName = "Pods-ClearMyBand";
+			productReference = FB0F25C1092964032770F834AF5B73A8 /* libPods-ClearMyBand.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = ED00A95DA2B454800035B632A678C87F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DF0222BFC0BADA51A3B260B58106656 /* MicrosoftBandKit_iOSDevelopment */,
+				F8B8CC8CE71E459F7A170C65C0D2B9DF /* Pods-ClearMyBand */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FC20C64E3422413453EB4E6A9639696 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DB6BCBE68570413DABDC8FAAF277225 /* MicrosoftBandKit_iOSDevelopment-dummy.m in Sources */,
+				E51249346EB1B007139C83A809B288E3 /* MSBStartStrip_Private.m in Sources */,
+				FED882746B2428B82614CD127A888741 /* MSBTileManagerSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BFCF5327B71B39905518DC09AD96716 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35367202A627A76DF8042B8E5926BB6D /* Pods-ClearMyBand-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E44F0DA8A2A8DD7BCC6E8168B1DB544 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MicrosoftBandKit_iOSDevelopment;
+			target = 9DF0222BFC0BADA51A3B260B58106656 /* MicrosoftBandKit_iOSDevelopment */;
+			targetProxy = 5471CF07D36FCED48B945FAC9A8A13FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EBB7DCA3D013C901469BB107521456F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE1271527B79759E64F1B1831030FEA5 /* Pods-ClearMyBand.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7D32785B762CF33881EEFD278A32A6A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B29F35F4A0A6977D866E056EE607CF9C /* Pods-ClearMyBand.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CFE2680AFCC6B5DC99C49A64B99E2A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C7AFD16DFCF564400EA42F404C61D1 /* MicrosoftBandKit_iOSDevelopment.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MicrosoftBandKit_iOSDevelopment/MicrosoftBandKit_iOSDevelopment-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D8CE4C2C48594A6606EB669389BEF1B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C7AFD16DFCF564400EA42F404C61D1 /* MicrosoftBandKit_iOSDevelopment.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MicrosoftBandKit_iOSDevelopment/MicrosoftBandKit_iOSDevelopment-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		267C7D3CE62ED6134B0C2D470873CD84 /* Build configuration list for PBXNativeTarget "MicrosoftBandKit_iOSDevelopment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFE2680AFCC6B5DC99C49A64B99E2A04 /* Debug */,
+				D8CE4C2C48594A6606EB669389BEF1B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FB8B68716A73132217A2C37EFFB06B8 /* Build configuration list for PBXNativeTarget "Pods-ClearMyBand" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D32785B762CF33881EEFD278A32A6A8 /* Debug */,
+				4EBB7DCA3D013C901469BB107521456F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
