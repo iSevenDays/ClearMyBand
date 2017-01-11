@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'MicrosoftBandKit with private headers'
   s.homepage = 'http://example.com'
   s.author   = { 'Anton Sokolchenko' => 'wsevendays@gmail.com' }
-  s.license      = { "MIT" }
+  s.license      = "MIT"
   s.requires_arc = true
   s.vendored_frameworks = 'MicrosoftBandKit_iOS.framework'
   s.source   = { :git => 'https://github.com/me/MyInternalLibrary.git', :tag => s.version.to_s }

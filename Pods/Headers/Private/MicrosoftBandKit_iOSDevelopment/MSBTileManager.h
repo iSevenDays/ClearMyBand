@@ -1,0 +1,1 @@
+../../../../MicrosoftBandKitDevelopment/MSBTileManager.h

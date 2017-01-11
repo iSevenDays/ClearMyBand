@@ -1,0 +1,1 @@
+../../../../MicrosoftBandKitDevelopment/MSBDeviceStrappDescriptor.h

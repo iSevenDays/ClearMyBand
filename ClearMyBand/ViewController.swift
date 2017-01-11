@@ -8,14 +8,6 @@
 
 import UIKit
 
-// Strip = tiles
-// Strap = one tile
-
-struct StrapModel {
-	var name: String
-	var appID: UUID
-	var isOn: Bool
-}
 
 class ViewController: UIViewController {
 
@@ -26,7 +18,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var clearNotificationsBtn: UIButton!
 	@IBOutlet weak var tableView: UITableView!
 	
-	var strip: [StrapModel] = []
+	var strip: [StrappModel] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -107,7 +99,7 @@ class ViewController: UIViewController {
 			for strap in strapps {
 				let strapAppID = strap.strappDescriptor.appID!
 				let isOn = UserDefaults.standard.bool(forKey: strapAppID.uuidString)
-				let strapModel = StrapModel(name: strap.strappDescriptor.displayName, appID: strapAppID, isOn: isOn)
+				let strapModel = StrappModel(name: strap.strappDescriptor.displayName, appID: strapAppID, isOn: isOn)
 				strongSelf.strip.append(strapModel)
 				strongSelf.tableView.reloadData()
 			}

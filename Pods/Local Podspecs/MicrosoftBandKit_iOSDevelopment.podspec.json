@@ -9,10 +9,7 @@
   "authors": {
     "Anton Sokolchenko": "wsevendays@gmail.com"
   },
-  "license": {
-    "type": "New BSD License",
-    "file": "LICENSE"
-  },
+  "license": "MIT",
   "requires_arc": true,
   "vendored_frameworks": "MicrosoftBandKit_iOS.framework",
   "source": {

@@ -1,0 +1,1 @@
+../../../../MicrosoftBandKitDevelopment/MSBClient+Private.h
