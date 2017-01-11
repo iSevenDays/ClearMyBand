@@ -16,7 +16,7 @@
 
 @property (nonatomic, weak) MSBDeviceNotificationFacility *notificationFacility;
 
-- (void)clearStrapp:(NSUUID *)strappUUID completion:(void(^)(NSError *error))completion;
+- (void)clearStrapp:(NSUUID *)strappUUID completion:(void(^)(BOOL success))completion;
 
 @end
 

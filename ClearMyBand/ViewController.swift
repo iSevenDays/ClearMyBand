@@ -8,6 +8,9 @@
 
 import UIKit
 
+let knownTiles: [String: String] = ["4076B009-0455-4AF7-A705-6D4ACD45A556": "Notifications",
+                                    "823BA55A-7C98-4261-AD5E-929031289C6E": "Email",
+                                    "69A39B4E-084B-4B53-9A1B-581826DF9E36": "Weather"]
 
 class ViewController: UIViewController {
 
@@ -17,6 +20,8 @@ class ViewController: UIViewController {
 	@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 	@IBOutlet weak var clearNotificationsBtn: UIButton!
 	@IBOutlet weak var tableView: UITableView!
+	
+	let tileFabric = TileFabric()
 	
 	var strip: [StrappModel] = []
 	
@@ -54,29 +59,73 @@ class ViewController: UIViewController {
 		statusItem.title = "Can not retrieve tiles"
 	}
 	
+	// MARK: - Clear notifications tile adding to Microsoft Band 2 strip
+	
+	@IBAction func removeClearTile(_ sender: UIButton) {
+		client?.tileManager.removeTile(with: UUID(uuidString: tileFabric.clearTileID), completionHandler: { [weak self] (error) in
+			if error == nil {
+				self?.show(notificationMessage: "Removed", withTitle: "Success")
+			} else {
+				self?.show(notificationMessage: "Can not remove the tile", withTitle: "Error")
+			}
+		})
+	}
+	
+	@IBAction  func addClearTileToBand(_ sender: UIButton) {
+		guard let clearTile = tileFabric.clearTile() else {
+			show(notificationMessage: "Can not create a tile", withTitle: "Error")
+			return
+		}
+		
+		client?.tileManager.add(clearTile, completionHandler: { [weak self] (error) in
+			
+			if error == nil {
+				self?.updateClearTile()
+			} else if let error = error as? NSError {
+				if error.code == MSBErrorType.tileAlreadyExist.rawValue {
+					self?.updateClearTile()
+				} else {
+					self?.show(notificationMessage: "Can not create a tile on Band", withTitle: "Error")
+				}
+			}
+		})
+	}
+	
+	func updateClearTile() {
+		NSLog("%@", "Updating clear tile")
+		
+		let textData = try! MSBPageTextBlockData(elementId: 1, text: "Notifications cleared")
+		
+		let pageData = MSBPageData(id: UUID(uuidString: tileFabric.clearTilepageDataID), layoutIndex: 0, value: [textData])
+		
+		client?.tileManager.setPages([pageData as Any], tileId: UUID(uuidString: tileFabric.clearTileID), completionHandler: { [weak self] (error) in
+			if error == nil {
+				self?.show(notificationMessage: "Clear tile sent successfully", withTitle: "Success")
+			} else {
+				self?.show(notificationMessage: "Error sending tile information", withTitle: "Error")
+			}
+		})
+	}
+	
 	// MARK: - Actions
 	@IBAction func clearNotifications(_ sender: UIButton) {
-		let enabledStraps = strip.filter({$0.isOn})
-		print(enabledStraps)
-		
-		guard let sms = enabledStraps.filter({$0.name == "SMS"}).first else { return }
+		let enabledStrapps = strip.filter({$0.isOn})
+		NSLog("%@%", enabledStrapps)
 		
 		guard let tileManager = client?.tileManager as? MSBTileManager else { return }
 		
-		var error: NSError? = nil
-		
-		tileManager.utility.clearStrapp(sms.appID) { (error) in
-			if let error = error {
-				NSLog("%@%", "tileManagerPrivate can not clear: \(sms)")
-			}
+		for strapp in enabledStrapps {
+			tileManager.utility.clearStrapp(strapp.appID, completion: nil)
 		}
-//		
-//		tileManager.utility.notificationFacility.clear(sms.strap, errorRef: &error)
-//		
-//		if let error = error {
-//			NSLog("%@%", "tileManagerPrivate can not clear: \(sms)")
-//		}
 		
+		show(notificationMessage: "Notifications cleared", withTitle: "Success")
+	}
+	
+	func show(notificationMessage: String, withTitle title: String) {
+		let controller = UIAlertController(title: title, message: notificationMessage, preferredStyle: .alert)
+		let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+		controller.addAction(okAction)
+		present(controller, animated: true, completion: nil)
 	}
 
 
@@ -99,7 +148,13 @@ class ViewController: UIViewController {
 			for strap in strapps {
 				let strapAppID = strap.strappDescriptor.appID!
 				let isOn = UserDefaults.standard.bool(forKey: strapAppID.uuidString)
-				let strapModel = StrappModel(name: strap.strappDescriptor.displayName, appID: strapAppID, isOn: isOn)
+				var displayName = strap.strappDescriptor.displayName ?? "Unknown"
+				if displayName == "(DEFAULT NAME)" {
+					if let knowTileName = knownTiles[strapAppID.uuidString] {
+						displayName = knowTileName
+					}
+				}
+				let strapModel = StrappModel(name: displayName, appID: strapAppID, isOn: isOn)
 				strongSelf.strip.append(strapModel)
 				strongSelf.tableView.reloadData()
 			}
@@ -125,25 +180,33 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: MSBClientManagerDelegate {
 	func clientManager(_ clientManager: MSBClientManager!, clientDidConnect client: MSBClient!) {
+		NSLog("%@", "clientDidConnect")
 		showConnectedStatusFor(clientName: client.name)
 		reloadTiles()
 	}
 	
 	func clientManager(_ clientManager: MSBClientManager!, clientDidDisconnect client: MSBClient!) {
+		NSLog("%@", "clientDidDisconnect")
 		showDisconnectedStatusFor(clientName: client.name)
 	}
 	
 	func clientManager(_ clientManager: MSBClientManager!, client: MSBClient!, didFailToConnectWithError error: Error!) {
+		NSLog("%@", "didFailToConnectWithError")
 		showFailedStatusFor(clientName: client.name)
 	}
 }
 
 extension ViewController: MSBClientTileDelegate {
 	func client(_ client: MSBClient!, tileDidOpen event: MSBTileEvent!) {
+		NSLog("%@", "tileDidOpen \(event)")
 		
+		if event.tileId.uuidString == tileFabric.clearTileID {
+			let emptySender = UIButton()
+			clearNotifications(emptySender)
+		}
 	}
 	
 	func client(_ client: MSBClient!, tileDidClose event: MSBTileEvent!) {
-		
+		NSLog("%@", "tileDidClose \(event)")
 	}
 }
