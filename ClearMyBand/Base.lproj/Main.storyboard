@@ -110,9 +110,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CA-HY-OJc">
-                                <rect key="frame" x="8" y="532" width="94" height="34"/>
+                                <rect key="frame" x="8" y="532" width="168" height="29"/>
                                 <color key="backgroundColor" red="0.86507291666666664" green="0.12624999054893127" blue="0.11422695774849613" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Remove tile"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Remove tile from Band"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="removeClearTile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XB8-sy-EUz"/>
                                 </connections>
@@ -128,6 +134,7 @@
                             <constraint firstItem="6CA-HY-OJc" firstAttribute="leading" secondItem="QiI-u2-A5P" secondAttribute="leading" id="SDc-F3-KI5"/>
                             <constraint firstItem="CaU-61-leF" firstAttribute="top" secondItem="neu-bU-SLZ" secondAttribute="bottom" id="TD4-k1-6XP"/>
                             <constraint firstAttribute="trailing" secondItem="CaU-61-leF" secondAttribute="trailing" id="U2J-2H-yxE"/>
+                            <constraint firstItem="6CA-HY-OJc" firstAttribute="width" secondItem="QiI-u2-A5P" secondAttribute="width" id="Xpd-QK-WPk"/>
                             <constraint firstItem="QiI-u2-A5P" firstAttribute="bottom" secondItem="6CA-HY-OJc" secondAttribute="top" constant="-10" id="c1B-kh-Ara"/>
                             <constraint firstItem="QiI-u2-A5P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="eT5-t3-KcO"/>
                             <constraint firstItem="neu-bU-SLZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="lrZ-HB-aXp"/>

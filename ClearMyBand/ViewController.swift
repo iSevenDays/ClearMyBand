@@ -25,6 +25,9 @@ class ViewController: UIViewController {
 	
 	var strip: [StrappModel] = []
 	
+	let clearingNotificationsText = "Clearing notifications..."
+	let clearedNotificationsText = "Notifications cleared"
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.delegate = self
@@ -78,23 +81,24 @@ class ViewController: UIViewController {
 		}
 		
 		client?.tileManager.add(clearTile, completionHandler: { [weak self] (error) in
+			guard let strongSelf = self else { return }
 			
 			if error == nil {
-				self?.updateClearTile()
+				strongSelf.updateClearTileWithText(text: strongSelf.clearingNotificationsText)
 			} else if let error = error as? NSError {
 				if error.code == MSBErrorType.tileAlreadyExist.rawValue {
-					self?.updateClearTile()
+					strongSelf.updateClearTileWithText(text: strongSelf.clearingNotificationsText)
 				} else {
-					self?.show(notificationMessage: "Can not create a tile on Band", withTitle: "Error")
+					strongSelf.show(notificationMessage: "Can not create a tile on Band", withTitle: "Error")
 				}
 			}
 		})
 	}
 	
-	func updateClearTile() {
+	func updateClearTileWithText(text: String) {
 		NSLog("%@", "Updating clear tile")
 		
-		let textData = try! MSBPageTextBlockData(elementId: 1, text: "Notifications cleared")
+		let textData = try! MSBPageTextBlockData(elementId: 1, text: text)
 		
 		let pageData = MSBPageData(id: UUID(uuidString: tileFabric.clearTilepageDataID), layoutIndex: 0, value: [textData])
 		
@@ -117,7 +121,7 @@ class ViewController: UIViewController {
 		for strapp in enabledStrapps {
 			tileManager.utility.clearStrapp(strapp.appID, completion: nil)
 		}
-		
+		updateClearTileWithText(text: clearedNotificationsText)
 		show(notificationMessage: "Notifications cleared", withTitle: "Success")
 	}
 	
@@ -208,5 +212,6 @@ extension ViewController: MSBClientTileDelegate {
 	
 	func client(_ client: MSBClient!, tileDidClose event: MSBTileEvent!) {
 		NSLog("%@", "tileDidClose \(event)")
+		updateClearTileWithText(text: clearingNotificationsText)
 	}
 }

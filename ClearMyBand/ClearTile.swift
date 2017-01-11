@@ -35,7 +35,7 @@ class TileFabric {
 			return nil
 		}
 		
-		let pageTextBlockRect = MSBPageRect(x: 30, y: 0, width: 240, height: 40)
+		let pageTextBlockRect = MSBPageRect(x: 10, y: 0, width: 300, height: 40)
 		
 		// add the text block to contain the first message
 		guard let pageTextBlock = MSBPageTextBlock(rect: pageTextBlockRect, font: MSBPageTextBlockFont.small) else {
@@ -45,10 +45,10 @@ class TileFabric {
 		
 		pageTextBlock.elementId = 1
 		pageTextBlock.horizontalAlignment = .center
-		pageTextBlock.autoWidth = false
+		pageTextBlock.autoWidth = true
 		pageTextBlock.color = try! MSBColor(uiColor: UIColor.white)
 		
-		let flowPanelRect = MSBPageRect(x: 80, y: 64, width: 280, height: 105)
+		let flowPanelRect = MSBPageRect(x: 10, y: 44, width: 300, height: 105)
 		guard let flowPanel = MSBPageFlowPanel(rect: flowPanelRect) else {
 			NSLog("%@", "Error can not create flowPanel")
 			return nil
