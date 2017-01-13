@@ -34,7 +34,21 @@ class ViewController: UIViewController {
 		tableView.dataSource = self
 		MSBClientManager.shared().delegate = self
 		
+		connectToBand()
+		
+		NotificationCenter.default.addObserver(self, selector: #selector(bluetoothStateChanged), name: NSNotification.Name.MSBClientManagerBluetoothPower, object: nil)
+	}
+	
+	func bluetoothStateChanged(notification: Notification) {
+		guard let enabled = notification.userInfo?[MSBClientManagerBluetoothPowerKey] as? NSNumber else { return }
+		if enabled.boolValue {
+			connectToBand()
+		}
+	}
+	
+	func connectToBand() {
 		if let client = MSBClientManager.shared().attachedClients().first as? MSBClient {
+			showConnectingStatus()
 			self.client = client
 			client.tileDelegate = self
 			MSBClientManager.shared().connect(client)
@@ -42,6 +56,11 @@ class ViewController: UIViewController {
 	}
 	
 	// MARK: - Connection status
+	func showConnectingStatus() {
+		activityIndicatorView.startAnimating()
+		statusItem.title = "Connecting..."
+	}
+	
 	func showConnectedStatusFor(clientName: String) {
 		activityIndicatorView.stopAnimating()
 		statusItem.title = "Connected to " + clientName
