@@ -1,5 +1,5 @@
 //
-//  ClearTile.swift
+//  TileFabric.swift
 //  ClearMyBand
 //
 //  Created by Anton Sokolchenko on 11.01.17.
