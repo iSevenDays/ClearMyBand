@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14122A1C1E251EB700D5C5C5 /* StrapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14122A1B1E251EB700D5C5C5 /* StrapTableViewCell.swift */; };
+		1462BD711E2B058700479F42 /* SVTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462BD701E2B058700479F42 /* SVTimer.swift */; };
 		14A2C9771E24D3BD0079304D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2C9761E24D3BD0079304D /* AppDelegate.swift */; };
 		14A2C9791E24D3BD0079304D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2C9781E24D3BD0079304D /* ViewController.swift */; };
 		14A2C97C1E24D3BD0079304D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A2C97A1E24D3BD0079304D /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		14122A1A1E250B3400D5C5C5 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		14122A1B1E251EB700D5C5C5 /* StrapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrapTableViewCell.swift; sourceTree = "<group>"; };
+		1462BD701E2B058700479F42 /* SVTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVTimer.swift; sourceTree = "<group>"; };
 		14A2C9731E24D3BD0079304D /* ClearMyBand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearMyBand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A2C9761E24D3BD0079304D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14A2C9781E24D3BD0079304D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				14122A1B1E251EB700D5C5C5 /* StrapTableViewCell.swift */,
 				14E88A431E26C62C009F37F8 /* StrappModel.swift */,
 				14E88A451E26CD14009F37F8 /* TileFabric.swift */,
+				1462BD701E2B058700479F42 /* SVTimer.swift */,
 			);
 			path = ClearMyBand;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 					14A2C9721E24D3BD0079304D = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 77JDVA6Z54;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -244,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1462BD711E2B058700479F42 /* SVTimer.swift in Sources */,
 				14122A1C1E251EB700D5C5C5 /* StrapTableViewCell.swift in Sources */,
 				14A2C9791E24D3BD0079304D /* ViewController.swift in Sources */,
 				14E88A461E26CD14009F37F8 /* TileFabric.swift in Sources */,

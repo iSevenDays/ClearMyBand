@@ -24,7 +24,7 @@ class TileFabric {
 		
 		let tileName = "Clear tile"
 		
-		let tileIcon = try! MSBIcon(uiImage: UIImage(named: "clearIcon46"))
+		let tileIcon = try! MSBIcon(uiImage: UIImage(named: "clearIcon48"))
 		
 		let smallIcon = try! MSBIcon(uiImage: UIImage(named: "clearIcon24"))
 		

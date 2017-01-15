@@ -28,6 +28,9 @@ class ViewController: UIViewController {
 	let clearingNotificationsText = "Clearing notifications..."
 	let clearedNotificationsText = "Notifications cleared"
 	
+	var reconnectTimer: SVTimer?
+	let connectionQueue = DispatchQueue(label: "reconnectionQueue", qos: DispatchQoS.utility)
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.delegate = self
@@ -41,17 +44,43 @@ class ViewController: UIViewController {
 	
 	func bluetoothStateChanged(notification: Notification) {
 		guard let enabled = notification.userInfo?[MSBClientManagerBluetoothPowerKey] as? NSNumber else { return }
+		NSLog("%@", "bluetoothStateChanged enabled: \(enabled)")
 		if enabled.boolValue {
 			connectToBand()
 		}
 	}
 	
 	func connectToBand() {
-		if let client = MSBClientManager.shared().attachedClients().first as? MSBClient {
+		let attachedClients = MSBClientManager.shared().attachedClients()
+		NSLog("%@", "connectToBand, attachedClients: \(attachedClients)")
+		if let client = attachedClients?.first as? MSBClient {
+			NSLog("%@", "connectToBand with client \(client)")
 			showConnectingStatus()
 			self.client = client
 			client.tileDelegate = self
 			MSBClientManager.shared().connect(client)
+		} else {
+			NSLog("%@", "No attached clients")
+			if let reconnectTimer = reconnectTimer {
+				if reconnectTimer.isValid {
+					return
+				}
+			}
+			reconnectTimer?.cancel()
+			reconnectTimer = nil
+			
+			NSLog("%@", "Reconnect timer started")
+			reconnectTimer = SVTimer(interval: 1000, tolerance: 1000, repeats: true, queue: connectionQueue, block: { [weak self] in
+				guard let strongSelf = self else { return }
+				
+				if MSBClientManager.shared().attachedClients().count > 0 {
+					strongSelf.connectToBand()
+					strongSelf.reconnectTimer?.cancel()
+					strongSelf.reconnectTimer = nil
+					NSLog("%@", "Reconnect timer dealloc")
+				}
+			})
+			reconnectTimer?.start()
 		}
 	}
 	
